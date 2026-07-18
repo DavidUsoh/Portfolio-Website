@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Student Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">student<span class="dot">.</span>portal</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu ☰</button>
+      <nav>
+        <ul class="nav-tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:3rem 0;">
+    <div class="container">
+      <p class="eyebrow hero-eyebrow">Let's talk</p>
+      <h1 style="font-size:2.4rem;">Contact Me</h1>
+      <p class="bio" style="margin-top:0.5rem;">Have a question, project idea, or just want to connect? Send a message below.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container contact-grid">
+
+      <!-- Contact form -->
+      <div>
+        <div id="formSuccess" class="form-success">✓ Message sent! I'll get back to you soon.</div>
+
+        <form id="contactForm" novalidate>
+          <div class="form-group" id="nameGroup">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. David Usoh" />
+            <div class="error-msg" id="nameError"></div>
+          </div>
+
+          <div class="form-group" id="emailGroup">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g. d.usoh2757@miva.edu.ng" />
+            <div class="error-msg" id="emailError"></div>
+          </div>
+
+          <div class="form-group" id="phoneGroup">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 08038201172" />
+            <div class="error-msg" id="phoneError"></div>
+          </div>
+
+          <div class="form-group" id="messageGroup">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message..."></textarea>
+            <div class="error-msg" id="messageError"></div>
+          </div>
+
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact info -->
+      <div class="contact-info">
+        <div class="card">
+          <span class="tag-number">Email</span>
+          <p style="margin:0; color:var(--slate);">d.usoh2757@miva.edu.ng</p>
+        </div>
+        <div class="card">
+          <span class="tag-number">Location</span>
+          <p style="margin:0; color:var(--slate);">Lagos, Nigeria</p>
+        </div>
+        <div class="card">
+          <span class="tag-number">Elsewhere</span>
+          <p style="margin:0;">
+            <a href="https://github.com/DavidUsoh/Portfolio-Website" target="_blank" rel="noopener" style="border-bottom:1px solid var(--gold);">GitHub</a>
+            &nbsp;·&nbsp;
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--gold);">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">&copy; 2026 David Usoh. Built for COS 106 &mdash; Introduction to Web Technologies.</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

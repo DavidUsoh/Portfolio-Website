@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner | Student Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">student<span class="dot">.</span>portal</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu ☰</button>
+      <nav>
+        <ul class="nav-tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:3rem 0;">
+    <div class="container">
+      <p class="eyebrow hero-eyebrow">Stay on top of deadlines</p>
+      <h1 style="font-size:2.4rem;">Academic Planner</h1>
+      <p class="bio" style="margin-top:0.5rem;">Add assignments and tasks, mark them done, and clear out what's finished.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="planner-box">
+
+        <!-- Add task form -->
+        <form id="taskForm" class="planner-form">
+          <input type="text" id="taskInput" placeholder="e.g. Finish CSC301 assignment" required aria-label="Task description" />
+          <input type="date" id="taskDate" aria-label="Due date" />
+          <select id="taskPriority" aria-label="Priority">
+            <option value="low">Low priority</option>
+            <option value="med" selected>Medium priority</option>
+            <option value="high">High priority</option>
+          </select>
+          <button type="submit" class="btn btn-gold">Add Task</button>
+        </form>
+
+        <!-- Stats -->
+        <div class="planner-stats">
+          <span>Total: <strong id="statTotal">0</strong></span>
+          <span>Completed: <strong id="statDone">0</strong></span>
+          <span>Pending: <strong id="statPending">0</strong></span>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="done">Completed</button>
+        </div>
+
+        <!-- Task list, rendered by JS -->
+        <ul id="taskList"></ul>
+
+        <!-- Empty state, shown/hidden by JS -->
+        <div id="emptyState" class="empty-state">No tasks yet — add your first one above.</div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">&copy; 2026 David Usoh. Built for COS 106 &mdash; Introduction to Web Technologies.</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
